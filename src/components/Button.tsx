@@ -1,3 +1,9 @@
-export function Button() {
-  return <button>Enviar</button>
+import { ButtonContainer } from "./Button.styles"
+
+interface ButtonProps {
+  color?: "primary" | "secondary" | "danger" | "success"
+}
+
+export function Button({ color = "primary" }: ButtonProps) {
+  return <ButtonContainer color={color}>Enviar</ButtonContainer>
 }
